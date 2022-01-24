@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1,user-scaleable=no">
+    <title>MyEstateManager</title>
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+    <div class="clr"></div>
+    <div class="topnav"><img src="images/poster_2021-09-08-074348.png"></div>
+    <div class="topbar">
+        <a onclick="document.getElementById('id01').style.display='block'" class="toplink">Tenant Login</a>
+        <a href="#" class="toplink">Admin Login</a>
+    </div>
+
+    <!--<button style="width:auto;">Login</button>-->
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="dashboard.html" method="GET">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Tenant Id</b></label>
+                <input type="text" placeholder="Enter Id" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <!--onclick="login()"-->
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="images/housing-estate.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/State.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/4-bedroom-bungalow-hp1-1024x652.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/download (1).jfif" style="width:100%">
+        </div>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <script src="js/animating.js"></script>
+    <script src="js/signin.js"></script>
+</body>
+
+</html>
