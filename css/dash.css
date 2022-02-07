@@ -29,7 +29,6 @@ body {
     border-left: 10px solid var(--orange);
     transition: 0.5s;
     overflow: hidden;
-    display: block;
 }
 
 .navigation ul {
@@ -142,6 +141,10 @@ body {
     pointer-events: none;
 }
 
+.close {
+    display: none;
+}
+
 .main {
     position: absolute;
     width: calc(100% - 200px);
@@ -155,7 +158,7 @@ body {
 
 .menu {
     width: 100%;
-    height: 60px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -164,46 +167,24 @@ body {
 }
 
 .menu-bar {
-    display: block;
-}
-
-.menu-search {
-    position: relative;
-    width: 400px;
-    margin: 0 10px;
-}
-
-.menu-search input {
-    width: 100%;
-    height: 30px;
-    border-radius: 40px;
-    padding: 3px 30px;
-    outline: none;
-}
-
-.menu-search ion-icon {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    font-size: 1.2em;
-}
-
-.nav-nav-1 {
     display: none;
 }
 
 .container {
     width: 100%;
     height: 100px;
-    background-color: aquamarine;
     box-sizing: border-box;
     margin-top: 0px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 30px;
-    background-color: rgb(29, 28, 28);
+    background-color: rgb(20, 4, 1);
     border-radius: 10px;
-    box-shadow: rgba(68, 130, 181, 0.692) 0px 3px 6px;
+    box-shadow: rgba(175, 38, 4, 0.692) 0px 3px 6px;
     text-align: center;
+}
+
+.demo {
+    font-size: 30px;
 }
 
 .col {
@@ -219,4 +200,131 @@ body {
 #propics {
     width: 50%;
     text-align: center;
+}
+
+.hideme {
+    box-sizing: border-box;
+    margin-top: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    background-color: rgb(230, 200, 166);
+    border-radius: 10px;
+    box-shadow: rgba(79, 92, 102, 0.692) 0px 3px 6px;
+    text-align: center;
+}
+
+.clearfix {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 20px;
+    grid-gap: 40px;
+    border-radius: 5px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.ddd h5 {
+    padding: 50px 0 1px;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fce5d6;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid rgb(245, 171, 148);
+    border-radius: 30px;
+    width: 40%;
+    height: 50%;
+    text-align: center;
+}
+
+
+/* Add Zoom Animation */
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* The Close Button (x) */
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    display: block;
+}
+
+
+/* Set a style for all buttons */
+
+.signoutbtn:hover {
+    opacity: 0.8;
+}
+
+
+/* Extra styles for the cancel button */
+
+.signoutbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #d4702d;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
 }

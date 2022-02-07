@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #cc8454;
+    --white: white;
+    --black: black;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container-1 {
+    position: relative;
+    width: 100%;
+    display: none;
+    transition: 5s;
+}
+
+.navigation {
+    position: fixed;
+    width: 150px;
+    height: 100%;
+    background-color: var(--orange);
+    border-left: 10px solid var(--orange);
+    transition: 2s;
+    overflow: hidden;
+}
+
+.navigation ul {
+    position: relative;
+    top: 50px;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+    background-color: var(--white);
+    width: 100%;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.navigation ul li a .icon ion-icon {
+    font-size: 20px;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+    color: var(--orange);
+}
+
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+.closes {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 2s;
+}
+
+.main {
+    position: absolute;
+    background-color: var(--white);
+    transition: o.5s;
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    margin: 0;
+    background-color: var(--orange);
+}
+
+.menu-bar {
+    font-size: 30px;
+}
+
+.container {
+    width: 100%;
+    height: 100px;
+    background-color: aquamarine;
+    box-sizing: border-box;
+    margin-top: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    background-color: rgb(29, 28, 28);
+    border-radius: 10px;
+    box-shadow: rgba(68, 130, 181, 0.692) 0px 3px 6px;
+    text-align: center;
+}
+
+.demo {
+    font-size: 16px;
+}
+
+.col {
+    position: relative;
+}
+
+.profile {
+    width: auto;
+    height: auto;
+    color: brown;
+}
+
+#propics {
+    width: 60%;
+    text-align: center;
+    object-position: center;
+}
+
+#ID {
+    font-size: 14px;
+}
+
+#name {
+    font-size: 10px;
+}
+
+.hideme {
+    box-sizing: border-box;
+    margin-top: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    padding: 10px;
+    background-color: rgb(230, 200, 166);
+    border-radius: 10px;
+    box-shadow: rgba(79, 92, 102, 0.692) 0px 3px 6px;
+    text-align: center;
+}
+
+.hideme b {
+    padding: 0;
+}
+
+.clearfix {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 15px;
+    grid-gap: 20px;
+    border-radius: 5px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fce5d6;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid rgb(245, 171, 148);
+    border-radius: 30px;
+    width: 60%;
+    height: 50%;
+    text-align: center;
+}
+
+
+/* Add Zoom Animation */
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* The Close Button (x) */
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    display: block;
+}
+
+
+/* Set a style for all buttons */
+
+.signoutbtn:hover {
+    opacity: 0.8;
+}
+
+
+/* Extra styles for the cancel button */
+
+.signoutbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #d4702d;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
